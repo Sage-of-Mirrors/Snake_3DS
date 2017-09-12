@@ -286,3 +286,10 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+*.o
+*.d
+Snake/build/Snake.map
+Snake/build/Snake.lst
+*.smdh
+*.elf
+*.3dsx
