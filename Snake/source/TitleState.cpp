@@ -52,7 +52,7 @@ void TitleState::RenderTopScreen() {
 void TitleState::RenderBottomScreen() {
 	sf2d_start_frame(GFX_BOTTOM, GFX_LEFT);
 
-	m_pressStartImg->RenderImage(0, 0);
+	m_pressStartImg->RenderImage(56, 50);
 	sf2d_draw_rectangle(0, 0, 320, 240, RGBA8(0, 0, 0, m_pressStartBlinkAlpha));
 
 	sf2d_end_frame();
