@@ -9,4 +9,5 @@ public:
 	void ChangeState(GameState*);
 	GameState* GetCurrentState();
 	void Update();
+	void Render();
 };

@@ -28,7 +28,7 @@ int main()
 	sf2d_init();
 	romfsInit();
 
-	sf2d_set_clear_color(RGBA8(0x30, 0x30, 0x30, 0xFF));
+	sf2d_set_clear_color(RGBA8(0x00, 0x00, 0x00, 0xFF));
 	sf2d_set_3D(0);
 
 	StateMachine m_machine;
@@ -41,18 +41,19 @@ int main()
 		hidScanInput();
 
 		m_machine.Update();
+		m_machine.Render();
 
 		// If Start button is pressed, we exit
-		if (hidKeysDown() & KEY_START)
-		{
-			break;
-		}
+		//if (hidKeysDown() & KEY_START)
+		//{
+			//break;
+		//}
 
 		sf2d_swapbuffers();
 	}
 
-	if (m_title)
-		delete m_title;
+	if (m_machine.GetCurrentState())
+		delete m_machine.GetCurrentState();
 
 	// Exit the services
 	romfsExit();

@@ -96,12 +96,14 @@
   <ItemGroup>
     <ClCompile Include="source\image.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\PlayState.cpp" />
     <ClCompile Include="source\StateMachine.cpp" />
     <ClCompile Include="source\TitleState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GameState.h" />
     <ClInclude Include="include\image.h" />
+    <ClInclude Include="include\PlayState.h" />
     <ClInclude Include="include\StateMachine.h" />
     <ClInclude Include="include\TitleState.h" />
   </ItemGroup>

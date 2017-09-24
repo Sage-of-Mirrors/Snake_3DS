@@ -15,7 +15,5 @@ Image::~Image() {
 }
 
 void Image::RenderImage(int positionX, int positionY) {
-	sf2d_start_frame(m_screen, m_side);
-		sf2d_draw_texture(m_texture, positionX, positionY);
-	sf2d_end_frame();
+	sf2d_draw_texture(m_texture, positionX, positionY);
 }

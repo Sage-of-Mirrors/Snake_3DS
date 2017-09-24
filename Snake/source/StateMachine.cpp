@@ -18,3 +18,7 @@ GameState* StateMachine::GetCurrentState() {
 void StateMachine::Update() {
 	m_currentState->Update(this);
 }
+
+void StateMachine::Render() {
+	m_currentState->Render();
+}
