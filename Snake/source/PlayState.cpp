@@ -1,15 +1,25 @@
 #include "..\include\PlayState.h"
+#include "..\include\TitleState.h"
 #include <sf2d.h>
 
 PlayState::PlayState() {
+	m_player = new Player();
+}
 
+PlayState::~PlayState() {
+	delete m_player;
 }
 
 void PlayState::Enter(const StateMachine* machine) {
 }
 
 void PlayState::Update(StateMachine* machine) {
-
+	if (m_player->Update())
+	{
+		TitleState* title = new TitleState();
+		machine->ChangeState(title);
+		delete this;
+	}
 }
 
 void PlayState::Render() {
@@ -20,7 +30,7 @@ void PlayState::Render() {
 void PlayState::RenderTopScreen() {
 	sf2d_start_frame(GFX_TOP, GFX_LEFT);
 
-	sf2d_draw_fill_circle(0, 0, 200, RGBA8(100, 50, 50, 255));
+	m_player->Render();
 
 	sf2d_end_frame();
 }
