@@ -1,12 +1,14 @@
 #pragma once
 #include "GameState.h"
 #include "Player.h"
+#include "food.h"
 
 class PlayState : public GameState {
 private:
 	void RenderTopScreen();
 	void RenderBottomScreen();
 	Player* m_player;
+	Food* m_food;
 public:
 	PlayState();
 	~PlayState();
