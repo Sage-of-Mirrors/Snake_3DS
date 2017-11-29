@@ -27,7 +27,7 @@ int main()
 	// Initialize the services
 	sf2d_init();
 	romfsInit();
-	consoleInit(GFX_BOTTOM, NULL);
+	//consoleInit(GFX_BOTTOM, NULL);
 
 	sf2d_set_clear_color(RGBA8(0x00, 0x00, 0x00, 0xFF));
 	sf2d_set_3D(0);

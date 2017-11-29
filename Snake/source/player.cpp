@@ -29,12 +29,8 @@ void Player::Update() {
 	m_xPos += m_xVel;
 	m_yPos += m_yVel;
 
-	int oldXBlock, oldYBlock;
-	oldXBlock = int(m_oldXPos);
-	oldYBlock = int(m_oldYPos);
-
-	if (m_firstSegment)
-		m_firstSegment->Update(float(oldXBlock * 8), float(oldYBlock * 8));
+	if ((m_firstSegment))
+		m_firstSegment->Update(m_oldXPos, m_oldYPos);
 }
 
 void Player::ProcessInput() {

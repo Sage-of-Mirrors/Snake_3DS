@@ -21,7 +21,7 @@ Segment::~Segment() {
 		delete m_next;
 
 	delete m_segmentImage;
-	delete m_position;;
+	delete m_position;
 }
 
 void Segment::Update(float newXPos, float newYPos) {
